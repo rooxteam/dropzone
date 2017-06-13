@@ -65,6 +65,13 @@ module.exports = (grunt) ->
           "dist/min/dropzone.min.js": "dist/dropzone.js"
         ]
 
+    gitclone:
+      default:
+        options:
+          repository: 'git@github.com:enyo/dropzone.git'
+          directory: 'github'
+
+
 
 
   grunt.loadNpmTasks "grunt-contrib-coffee"
@@ -72,6 +79,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-contrib-concat"
   grunt.loadNpmTasks "grunt-contrib-watch"
   grunt.loadNpmTasks "grunt-contrib-uglify"
+  grunt.loadNpmTasks "grunt-git"
 
   # Default tasks
   grunt.registerTask "default", [ "downloads" ]
