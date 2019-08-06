@@ -176,6 +176,13 @@ class Dropzone extends Emitter {
       uploadMultiple: false,
 
       /**
+       * If the "needUpload" flag set to 'false'
+       * component doesn't upload data to the server automatically.
+       * Default set to 'true'.
+       */
+      needUpload: true,
+
+      /**
        * Whether you want files to be uploaded in chunks to your server. This can't be
        * used in combination with `uploadMultiple`.
        *
@@ -1868,6 +1875,14 @@ class Dropzone extends Emitter {
   uploadFile(file) { return this.uploadFiles([file]); }
 
   uploadFiles(files) {
+    if (this.options.needUpload) {
+      this._uploadFiles(files);
+    } else {
+      this._finished(files, '', null);
+    }
+  }
+
+  _uploadFiles(files) {
     this._transformFiles(files, (transformedFiles) => {
       if (files[0].upload.chunked) {
         // This file should be sent in chunks!
