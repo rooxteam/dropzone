@@ -9,7 +9,7 @@ Need to install grunt, ruby and Sass (if is absent):
 
 Run build: `grunt default`
 
-Publish: `npm publish`
+Publish: `npm publish --access public`
 
 <img alt="Dropzone.js" src="http://www.dropzonejs.com/images/new-logo.svg" />
 

@@ -14,5 +14,5 @@ tool
 public
 
 # Exclude all js files
-**/*.js
+# **/*.js
 !index.js
