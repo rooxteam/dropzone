@@ -1,3 +1,16 @@
+## Publish
+Need to install grunt, ruby and Sass (if is absent):
+
+`sudo apt install node-grunt-cli`
+
+`sudo apt install ruby-full rubygems autogen autoconf libtool make`
+
+`sudo gem install sass`
+
+Run build: `grunt default`
+
+Publish: `npm publish`
+
 <img alt="Dropzone.js" src="http://www.dropzonejs.com/images/new-logo.svg" />
 
 Dropzone.js is a light weight JavaScript library that turns an HTML element into a dropzone.
